@@ -21,3 +21,31 @@ O serviço deve ter também um ‘endpoint’ responsável pela consulta dos dad
 
 
 Após finalizar o projeto deve enviar a ‘url’ do repositório para análise.
+___________________________________________________________________________________
+
+Teste sugerido:
+
+http://localhost:8080/swagger-ui.html#/invoice-controller/newInvoiceUsingPOST
+
+POST ---> http://localhost:8080/invoices/
+
+Msg Body
+---
+{
+  "amountPaid": 750,
+  "currencyCode": "BRL",
+  "date": "2018-11-05T20:07:25.536Z",
+  "tax": 0,
+  "total": 750,
+  "transactions": [
+    {
+      "amount": 750,
+      "currencyCode": "BRL",
+      "date": "2018-11-05T20:07:25.536Z",
+      "maskedCardNumber": "************0011",
+      "paymentMethod": "CARD"
+    }
+  ]
+}
+---
+
