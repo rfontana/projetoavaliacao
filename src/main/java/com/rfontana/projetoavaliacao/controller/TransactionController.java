@@ -65,7 +65,7 @@ class TransactionController {
 
         transaction.setStatus(Status.NEW.name());
 
-        jmsTemplate.convertAndSend("transactions", transaction);
+        jmsTemplate.convertAndSend("queue.transactions", transaction);
 
         log.debug("Message sent: " + transaction.toString());
 

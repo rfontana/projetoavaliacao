@@ -23,7 +23,7 @@ public class InvoiceReceiver {
         this.invoiceRepository = invoiceRepository;
     }
 
-    @JmsListener(destination = "invoices", containerFactory = "myFactory")
+    @JmsListener(destination = "queue.invoices", containerFactory = "myFactory")
     public void receiveMessage(Invoice invoice) {
 
         log.debug("Invoice received: " + invoice.toString());

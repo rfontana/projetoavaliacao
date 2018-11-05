@@ -8,6 +8,7 @@ import java.util.List;
 
 @Repository
 public interface TransactionRepository extends PagingAndSortingRepository<Transaction, Long> {
+
     List<Transaction> findAll();
 
 }

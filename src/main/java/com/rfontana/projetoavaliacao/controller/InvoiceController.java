@@ -71,8 +71,9 @@ class InvoiceController {
     ResponseEntity<Resource<Invoice>> newInvoice(@RequestBody Invoice invoice) {
 
         invoice.setStatus(Status.NEW.name());
+        invoice.setDeleted(false);
 
-        jmsTemplate.convertAndSend("invoices", invoice);
+        jmsTemplate.convertAndSend("queue.invoices", invoice);
 
         log.debug("Message sent: " + invoice.toString());
 

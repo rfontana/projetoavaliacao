@@ -23,7 +23,7 @@ public class TransactionReceiver {
         this.transactionRepository = transactionRepository;
     }
 
-    @JmsListener(destination = "transactions", containerFactory = "myFactory")
+    @JmsListener(destination = "queue.transactions", containerFactory = "myFactory")
     public void receiveMessage(Transaction transaction) {
 
         log.debug("Transaction received: " + transaction.toString());

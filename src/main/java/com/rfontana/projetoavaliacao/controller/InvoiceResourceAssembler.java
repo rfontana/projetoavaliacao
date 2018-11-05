@@ -2,14 +2,10 @@ package com.rfontana.projetoavaliacao.controller;
 
 
 import com.rfontana.projetoavaliacao.domain.Invoice;
-import com.rfontana.projetoavaliacao.domain.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.Resource;
 import org.springframework.hateoas.ResourceAssembler;
 import org.springframework.stereotype.Component;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
