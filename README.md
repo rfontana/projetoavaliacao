@@ -29,7 +29,7 @@ http://localhost:8080/swagger-ui.html#/invoice-controller/newInvoiceUsingPOST
 
 POST ---> http://localhost:8080/invoices/
 
----
+
 POST /invoices/ HTTP/1.1
 Content-Length: 320
 Host: localhost:8080
@@ -48,14 +48,13 @@ Content-Type: application/json
       "date": "2018-11-05T20:07:25.536Z",
       "maskedCardNumber": "************0011",
       "paymentMethod": "CARD"
-
     }
   ]
 }
----
+
 
 ___________________________________________________________________________________
 
-Testar consulta paginada:
+Testar consulta paginada (link em index.html):
 
 http://localhost:8080/
