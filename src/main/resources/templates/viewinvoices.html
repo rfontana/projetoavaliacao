@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Invoices</title>
+</head>
+<body>
+<div align="center">
+    <table border="1">
+        <thead>
+        <tr>
+            <th value="Id" th:text="Id"/>
+            <th value="Date" th:text="date"/>
+            <th value="Total" th:text="total"/>
+            <th value="Status" th:text="status"/>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="invoice, iStat : ${invoicePage.content}"
+            th:style="${iStat.odd}? 'font-weight: bold;'"
+            th:alt-title="${iStat.even}? 'even' : 'odd'">
+            <td th:text="${invoice.invoiceId}"/>
+            <td th:text="${invoice.date}"/>
+            <td th:text="${invoice.total}"/>
+            <td th:text="${invoice.status}"/>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div align="center">
+    <table border="0">
+        <tr>
+            <td th:if="${invoicePage.totalPages > 0}" class="pagination pagination-centered" align="center"
+                th:each="pageNumber : ${pageNumbers}">
+                <a th:href="@{/viewinvoices/(size=${invoicePage.size}, page=${pageNumber})}"
+                   th:text=${pageNumber}
+                   th:class="${pageNumber==invoicePage.number + 1} ? active"></a>
+            </td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>

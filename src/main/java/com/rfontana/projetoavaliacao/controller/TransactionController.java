@@ -1,7 +1,6 @@
 package com.rfontana.projetoavaliacao.controller;
 
 
-import com.rfontana.projetoavaliacao.ProjetoavaliacaoApplication;
 import com.rfontana.projetoavaliacao.domain.Status;
 import com.rfontana.projetoavaliacao.domain.Transaction;
 import com.rfontana.projetoavaliacao.exception.TransactionNotFoundException;
